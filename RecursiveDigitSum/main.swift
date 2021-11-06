@@ -13,6 +13,14 @@ func superDigit(n: String, k: Int) -> Int {
         p = p + n
     }
     print(p)
+    let arrS = Array(p)
+    print(arrS)
+    var sum = 0
+    for i in 0..<arrS.count {
+        let c = Int(String(arrS[i]))
+        sum = sum + c!
+    }
+    print(sum)
      
     return 0
 }
