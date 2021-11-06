@@ -15,14 +15,23 @@ func superDigit(n: String, k: Int) -> Int {
     print(p)
     let arrS = Array(p)
     print(arrS)
-    var sum = 0
-    for i in 0..<arrS.count {
-        let c = Int(String(arrS[i]))
-        sum = sum + c!
+    
+    func ciclicSum(of digit: [Character]) -> Int {
+        var sum = 0
+        for i in 0..<arrS.count {
+            let c = Int(String(arrS[i]))
+            sum = sum + c!
+        }
+        print(sum)
+        return sum
     }
-    print(sum)
-     
-    return 0
+    
+    var s = Array(String(ciclicSum(of: arrS)))
+    print(s)
+    while s.count > 1 {
+        s = Array(String(ciclicSum(of: s)))
+    }
+    return Int(String(s))!
 }
 
 print(superDigit(n: "9875", k: 4))
