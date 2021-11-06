@@ -7,5 +7,15 @@
 
 import Foundation
 
-print("Hello, World!")
+func superDigit(n: String, k: Int) -> Int {
+    var p = String()
+    for _ in 0..<k {
+        p = p + n
+    }
+    print(p)
+     
+    return 0
+}
+
+print(superDigit(n: "9875", k: 4))
 
