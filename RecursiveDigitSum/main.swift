@@ -18,8 +18,8 @@ func superDigit(n: String, k: Int) -> Int {
     
     func ciclicSum(of digit: [Character]) -> Int {
         var sum = 0
-        for i in 0..<arrS.count {
-            let c = Int(String(arrS[i]))
+        for i in 0..<digit.count {
+            let c = Int(String(digit[i]))
             sum = sum + c!
         }
         print(sum)
